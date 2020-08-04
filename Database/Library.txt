@@ -1,0 +1,18 @@
+Harry Potter and the Philosopher's Stone
+Harry Potter and the Chamber of Secrets
+Harry Potter and Prisoner of Azkaban
+Harry Potter and Goblet of Fire
+Harry Potter and Order of the Phoenix
+Harry Potter and Half-Blood Prince
+Harry Potter and Deathly Hallows
+Pride and prejudice
+One Hundred Years of Solitude
+Love in the Time of Cholera
+The Little Prince
+The Three-Body Problem
+The Dark Forest 
+Death's End
+
+
+//This is a textfile with simple library data inside
+//This is a temporary database
