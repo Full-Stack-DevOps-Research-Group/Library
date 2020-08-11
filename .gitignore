@@ -24,3 +24,6 @@ bld/
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Express
+express-LocalLibrary/node_modules
