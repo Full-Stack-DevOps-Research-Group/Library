@@ -27,3 +27,5 @@ bld/
 
 # Express
 express-LocalLibrary/node_modules
+
+node_modules/
