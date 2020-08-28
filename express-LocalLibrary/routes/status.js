@@ -12,11 +12,19 @@ router.get('/', function(req, res, next) {
   });
 
 /* GET MongoDB connection status and render the status page */
-mongoose.connection.on("connected", function(){
-    console.log("DB connection OK");
+mongoose.connection.on("connected", function(err){
+  if(err){
+    console.log("DB connection not OK")
+    router.get('/', function(req, res, next) {
+      res.render('status', { DBstatus: 'Offline'}) 
+      });
+  }else {
+    console.log("DB connection OK")
     router.get('/', function(req, res, next) {
       res.render('status', { DBstatus: 'Online'}) 
-    });
-  });
+      });
+  }
+});
+
 module.exports = router;
 
