@@ -26,5 +26,13 @@ mongoose.connection.on("connected", function(err){
   }
 });
 
+mongoose.connection.on("disconnected", function(){
+  console.log("DB connection not OK")
+      router.get('/', function(req, res, next) {
+        res.render('status', { DBstatus: 'Offline'}) 
+        });
+})
+
+
 module.exports = router;
 
