@@ -1,5 +1,5 @@
 # Research-API
-How to run the project?\n
+How to run the project?\
 First, install nodejs and npm. 
 We can download these from the official website https://nodejs.org/en/download/
 After installing nodejs and npm, we need to install the database MongoDB.
