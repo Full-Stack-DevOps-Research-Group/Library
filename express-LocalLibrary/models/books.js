@@ -9,4 +9,4 @@ const booksSchema = mongoose.Schema({
     quantity:{type:Number,required:true}
 });
 
-module.exports = mongoose.model('books', booksSchema);
+module.exports = mongoose.model('Books', booksSchema, 'Books');
