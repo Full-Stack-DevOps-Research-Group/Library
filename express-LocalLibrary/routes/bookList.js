@@ -2,20 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Books = require('../models/books');
 
-// var newbook =  new books({
-//   "book_id": "String",
-//   "book_name":"String",
-//   "author_id":"dfsdf",
-//   "user_id":['a','b','c'],
-//   "description":"dfgdfgdfgwwww"
-// })
-// newbook.save(function(err){
-//   if(err){
-//     console.log(err)
-//     return
-//   }
-//   console.log("data add success");
-// })
 
 router.use('/', (req, res, next) => {
 	var result;
