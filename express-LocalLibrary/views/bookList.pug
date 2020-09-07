@@ -1,6 +1,8 @@
 extends layout
 
 block content
-  h1 = title
-  p W to #{title}
-  p <a href="baidu.com">baidu</a>
+  h1 This is a Library
+  p #{title}
+  ul 
+      each val, idx in bList
+        li <a href=/bookList/book_id/#{val.id}>#{val.name}</a>

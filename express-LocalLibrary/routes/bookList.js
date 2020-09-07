@@ -7,38 +7,26 @@ var url = 'mongodb+srv://root:P@ssw0rd@library.b54a2.mongodb.net/Library?retryWr
 
 mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true});
 
-// var newbook =  new books({
-//   "book_id": "String",
-//   "book_name":"String",
-//   "author_id":"dfsdf",
-//   "user_id":['a','b','c'],
-//   "description":"dfgdfgdfgwwww"
-// })
-// newbook.save(function(err){
-//   if(err){
-//     console.log(err)
-//     return
-//   }
-//   console.log("data add success");
-// })
 
+//Query data from books collection
 router.get('/', function(req, res, next) {
-	books.find({"book_name" : "String"},function(err,doc){
+	books.find({},function(err,doc){
 		if(err){
 			res.json({
 				status:'1',
 				msg:err.message
 			})      
 		}else{
-      var bookName=[];
-      for(var i = 0; i < doc.length; i++){
-        bookName[i] = doc[i].book_name;
-      }
-      res.locals = {bookName};
+			res.locals = {
+				bList : doc,
+			};
+			res.render('bookList', { title: 'Booklist' });
 		}
 	})
 });
 
+
+//Query books collection by id
 router.get('/book_id/:id', function(req, res, next) {
 	books.find({_id : req.params.id},function(err,doc){
 		if(err){
@@ -53,7 +41,5 @@ router.get('/book_id/:id', function(req, res, next) {
 	})
 });
 
-router.get('/', function(req, res, next) {
-  res.render('bookList', { title: 'Books!!'}) 
-  });
+
 module.exports = router;
