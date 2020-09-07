@@ -24,13 +24,13 @@ if (process.platform === 'win32') {
     input: process.stdin,
     output: process.stdout
   });
-  rl.on ('SIGINT', () => {
+  rl.on('SIGINT', () => {
     process.emit("SIGINT");
   });
 }
 
 const gracefulShutdown = (msg, callback) => {
-  mongoose.connection.close( () => {
+  mongoose.connection.close(() => {
     console.log(`Mongoose disconnected through ${msg}`);
     callback();
   });
@@ -54,4 +54,4 @@ process.on('SIGTERM', () => {
 
 connect();
 
-require('./locations');
+require('./books');

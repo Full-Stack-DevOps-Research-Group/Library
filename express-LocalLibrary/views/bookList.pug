@@ -1,6 +1,14 @@
 extends layout
 
 block content
-  h1 = title
-  p W to #{title}
-  p <a href="baidu.com">baidu</a>
+  table
+    thead
+      th Name
+      th Quantity
+      th Image
+    each book in books
+      tr
+        td #{book.name} 
+        td #{book.quantity}
+        td 
+          <img src='#{book.imageUrl}'>
