@@ -1,9 +1,29 @@
 # Research-API
-How to run the project?\
-First, install nodejs and npm. \
-We can download these from the official website https://nodejs.org/en/download/\
-After installing nodejs and npm, we need to install the database MongoDB.\
-Open the command window and go into the library folder. Run the command : npm install mongoose.\
-The next step is to install the open-cli. Run the command : npm install --save-dev open-cli\
-Now we are ready to go. Go into the express-LocalLibrary folder and run the command "npm install".\
-After that, run the command "npm run devstart".
+## Background
+The goals for this repository are:
+
+1. Learn how to create and run a project with a **MEAN** stack.
+2. Learn how to use the **API** model.
+3. Prepare for entering the industry field.
+## Install
+### Nodejs and Npm
+This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
+We can download these from the official website https://nodejs.org/en/download/
+### MongoDB
+Open the command window and go into the library folder. Run the command.
+```sh
+$ npm install mongoose
+```
+### Open-cli
+```sh
+$ npm install --save-dev open-cli
+```
+## Run the programe
+Go into the express-LocalLibrary folder and run the command.
+```sh
+$ npm install
+```
+After that, run the command.
+```sh
+$ npm run devstar
+```
